@@ -4,7 +4,7 @@ var userName = readLineSync.question("What's Your Name...?\n");
 console.log("welcome..!",userName,"\nI hope YOU KNOW Shrikant..!\n");
 function play(question,answer){
 
-  var userAnswer = readLineSync.question(question);
+  var userAnswer = readLineSync.question(question).toLowerCase();
   if(userAnswer === answer){
     console.log("Right...!");
     score = score + 1,"\n\n";
@@ -37,7 +37,7 @@ Question: "what is shrikant's primary school name?\n",
   },
   
   {   
-Question: "shrikant's birth month\n?",
+Question: "shrikant's birth month?\n",
   Answer: "june"
   }
   
@@ -49,10 +49,10 @@ for(i=0;i<myQuestionsArray.length;i++){
     
 }
 if(score > 2){
-console.log("thank's for your time, you know shrikant.!")}
+console.log(`thank's for your time ${userName}, you know shrikant. very well!`)}
 else{
-  console.log("sorry..! you dont know much about shrikant")
-}
+console.log(`thank's for your time ${userName}, you don't know much about shrikant..!`)}
   
 
+  
 
