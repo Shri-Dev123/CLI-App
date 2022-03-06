@@ -1,8 +1,7 @@
 var readLineSync = require('readline-sync');
 var score = 0;
-var userName = readLineSync.question("What's Your Name...? ");
-console.log("welcome..!",userName," DO YOU KNOW Shrikant..!");
-
+var userName = readLineSync.question("What's Your Name...?\n");
+console.log("welcome..!",userName,"\nI hope YOU KNOW Shrikant..!\n");
 function play(question,answer){
 
   var userAnswer = readLineSync.question(question);
@@ -12,11 +11,10 @@ function play(question,answer){
     
     console.log("your score is now: ",score)
   } else{
-
     console.log("wrong..!\n");
   }
 
-  console.log("_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*");
+  console.log("_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*\n");
 
 
   
@@ -24,23 +22,23 @@ function play(question,answer){
 
 var myQuestionsArray = [
   {   
-Question: "who is your favourite hero?",
-  Answer: "Batman"
+Question: "who is shrikant's favourite hero?\n",
+  Answer: "vijay"
   },
   
   {   
-Question: "what's your favourite hero's costume color?",
-  Answer: "yellow"
+Question: "what is shrikant's favourite food?\n",
+  Answer: "pav bhaji"
   },
   
   {   
-Question: "what's your primary school name?",
+Question: "what is shrikant's primary school name?\n",
   Answer: "marol kannada school"
   },
   
   {   
-Question: "How old are you?",
-  Answer: "23"
+Question: "shrikant's birth month\n?",
+  Answer: "june"
   }
   
 ];
@@ -50,4 +48,11 @@ for(i=0;i<myQuestionsArray.length;i++){
   play(myQuestionsArray[i].Question,myQuestionsArray[i].Answer);
     
 }
-console.log("thank's for your time...")
+if(score > 2){
+console.log("thank's for your time, you know shrikant.!")}
+else{
+  console.log("sorry..! you dont know much about shrikant")
+}
+  
+
+
